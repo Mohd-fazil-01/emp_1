@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(1, 1, 32);
+      color: white;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #222;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-bottom: 2px solid #444;
+    }
+
+    main {
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .firstSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .leftSection {
+      flex: 1;
+      min-width: 280px;
+      font-size: 1.2rem;
+      background-color: #1c1c3a;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 150, 0.2);
+    }
+
+    .leftSection .purple {
+      color: #00ff99;
+      font-weight: bold;
+    }
+
+    .rightSection {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .rightSection img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      main {
+        padding: 20px 10px;
+      }
+
+      .firstSection {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .leftSection {
+        font-size: 1rem;
+      }
+
+      header {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+    {% include 'emp/nav.html' %}
+  
+
+  <main>
+    <div class="firstSection">
+      <div class="leftSection">
+        Welcome to the <span class="purple">Employee Management System</span>!<br><br>
+        Here, you can efficiently manage employee records.<br><br>
+        Perform <span class="purple">CRUD</span> operations:<br>
+        <strong>Create, Read, Update,</strong> and <strong>Delete</strong> employee details seamlessly.<br><br>
+        Experience a smooth and secure interface for all your administrative needs.
+      </div>
+
+      <div class="rightSection">
+        <img src="static/web.webp" alt="image" />
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
